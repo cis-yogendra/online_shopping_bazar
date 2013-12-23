@@ -1,0 +1,130 @@
+%body
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.brand{href: "#"}
+          = image_tag "main_text.gif"
+        .nav-collapse
+          %ul.nav
+            %li.active
+              %a{href: "#"} Home
+            %li
+              %a{href: "#about"} About
+            %li
+              %a{href: "#contact"} Contact
+            %li.dropdown
+              %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+                Dropdown
+                %b.caret
+              %ul.dropdown-menu
+                %li
+                  %a{href: "#"} Item 1
+                %li
+                  %a{href: "#"} Item 2
+            / dropdown
+          / /.nav
+        / /.nav-collapse
+      / /.container
+    / /.navbar-inner
+  / /.navbar
+  .container
+    / Carousel
+    /
+      consult Bootstrap docs at
+      http://twitter.github.com/bootstrap/javascript.html#carousel
+    #this-carousel-id.carousel.slide
+      .carousel-inner
+        .item
+          %a{href: "http://hubblesite.org/gallery/album/entire/pr2006046a/xlarge_web/npp/128/"}
+            %img{alt: "Antennae Galaxies", src: "Carousel%20%7C%20Twitter%20Bootstrap%202.0.4_files/antennae.jpg"}/
+          .carousel-caption
+            %p The Antennae Galaxies
+            %p
+              %a{href: "http://hubblesite.org/gallery/album/entire/pr2006046a/xlarge_web/npp/128/"} Hubblesite.org »
+        .item
+          %a{href: "http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/"}
+            %img{alt: "Carina Caterpillar", src: "Carousel%20%7C%20Twitter%20Bootstrap%202.0.4_files/carina.jpg"}/
+          .carousel-caption
+            %p Carina Nebula: The Caterpillar
+            %p
+              %a{href: "http://hubblesite.org/gallery/album/entire/pr2007016e/xlarge_web/npp/128/"} Hubblesite.org »
+        .item.active
+          %a{href: "http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/"}
+            %img{alt: "Light Echo", src: "Carousel%20%7C%20Twitter%20Bootstrap%202.0.4_files/echo.jpg"}/
+          .carousel-caption
+            %p Light Echo From Star V838 Monocerotis
+            %p
+              %a{href: "http://hubblesite.org/gallery/album/entire/pr2003010i/npp/128/"} Hubblesite.org »
+        .item
+          %a{href: "http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/"}
+            %img{alt: "Galaxy NGC5866", src: "Carousel%20%7C%20Twitter%20Bootstrap%202.0.4_files/ngc5866.jpg"}/
+          .carousel-caption
+            %p Galaxy NGC 5866
+            %p
+              %a{href: "http://hubblesite.org/gallery/album/entire/pr2006024a/xlarge_web/npp/128/"} Hubblesite.org »
+      / .carousel-inner
+      /
+        next and previous controls here
+        href values must reference the id for this carousel
+      %a.carousel-control.left{"data-slide" => "prev", href: "#this-carousel-id"} ‹
+      %a.carousel-control.right{"data-slide" => "next", href: "#this-carousel-id"} ›
+    / .carousel
+    / end carousel
+    / Example row of columns
+    .row
+      .span4
+        %h2 Heading
+        %p
+          Donec id elit non mi porta gravida at eget metus. Fusce
+          dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+          fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+          mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn{href: "#"} View details »
+      .span4
+        %h2 Heading
+        %p
+          Donec id elit non mi porta gravida at eget metus. Fusce
+          dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+          fermentum massa justo sit amet risus. Etiam porta sem malesuada magna
+          mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn{href: "#"} View details »
+      .span4
+        %h2 Heading
+        %p
+          Donec sed odio dui. Cras justo odio, dapibus ac facilisis
+          in, egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+          Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+          ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn{href: "#"} View details »
+    %hr/
+    %footer
+      %p
+        By
+        %a{href: "http://twitter.com/davidcochran"} David Cochran
+        of
+        %a{href: "http://alittlecode.com/"} aLittleCode.com
+        for
+        %a{href: "http://webdesign.tutsplus.com/"} webdesign.tutsplus.com
+  / /container
+  /
+    Le javascript
+    \==================================================
+  / Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
+  %script{src: "Carousel%20%7C%20Twitter%20Bootstrap%202.0.4_files/jquery.js"}
+  :javascript
+    window.jQuery || document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')
+  / Bootstrap jQuery plugins compiled and minified
+  %script{src: "Carousel%20%7C%20Twitter%20Bootstrap%202.0.4_files/bootstrap.js"}
+  :javascript
+    $(document).ready(function(){
+      $('.carousel').carousel({
+        interval: 4000
+      });
+    });

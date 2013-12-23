@@ -7,6 +7,7 @@ Onlinebazar::Application.routes.draw do
   ActiveAdmin.routes(self)
   resources :products
   resources :categories
+  resources :homes, :only => [:index]
   # root :to => 'products#index'
 
   # The priority is based upon order of creation:
