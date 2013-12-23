@@ -1,5 +1,5 @@
 Onlinebazar::Application.routes.draw do
-  root :to => 'products#index'
+  root :to => 'homes#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 

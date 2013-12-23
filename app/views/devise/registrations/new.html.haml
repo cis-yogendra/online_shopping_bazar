@@ -17,29 +17,29 @@
         = f.label :password_confirmation
         %br/
         = f.password_field :password_confirmation
-      %div
-        = f.label :image
-        %br/
-        = f.file_field :image
-      .field
-        = f.label :address
-        %br/
-        = f.text_field :address, :class => 'address-picker-input'
-      .field
-        = f.label :address_latitude
-        %br/
-        = f.text_field :address_latitude, :readonly => true, :class => 'address-picker-latitude'
-      .field
-        = f.label :address_longitude
-        %br/
-        = f.text_field :address_longitude, :readonly => true, :class => 'address-picker-longitude'
-      .field
-        = f.label :address_locality
-        %br/
-        = f.text_field :address_locality, :readonly => true, :class => 'address-picker-locality'
-      .field
-        = f.label :address_country
-        %br/
-        = f.text_field :address_country, :readonly => true, :class => 'address-picker-country'
+      / %div
+      /   = f.label :image
+      /   %br/
+      /   = f.file_field :image
+      / .field
+      /   = f.label :address
+      /   %br/
+      /   = f.text_field :address, :class => 'address-picker-input'
+      / .field
+      /   = f.label :address_latitude
+      /   %br/
+      /   = f.text_field :address_latitude, :readonly => true, :class => 'address-picker-latitude'
+      / .field
+      /   = f.label :address_longitude
+      /   %br/
+      /   = f.text_field :address_longitude, :readonly => true, :class => 'address-picker-longitude'
+      / .field
+      /   = f.label :address_locality
+      /   %br/
+      /   = f.text_field :address_locality, :readonly => true, :class => 'address-picker-locality'
+      / .field
+      /   = f.label :address_country
+      /   %br/
+      /   = f.text_field :address_country, :readonly => true, :class => 'address-picker-country'
       %div= f.submit "Sign up"
 = render "devise/shared/links"

@@ -7,6 +7,7 @@
     = csrf_meta_tags
   %body{style: "background: #EEEEEE;"}
     %div{style: "float: right;margin-right: 23px;"}
+      = render :partial => "/homes/index"
       - if user_signed_in?
         = current_user.email
         = link_to "Categories", categories_path, :class => 'btn btn-primary'
