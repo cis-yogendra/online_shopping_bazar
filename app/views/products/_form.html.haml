@@ -1,0 +1,22 @@
+= nested_form_for @product, :html => { :multipart => true } do |f| 
+  - @product.errors.full_messages.each do |error|
+    = error
+  = f.label :product_name
+  = f.text_field :product_name
+
+  / - f.fields_for :pictures do |photo|
+  /   %p
+  /     = f.label :image
+  /     = f.file_field :image
+  /     = photo.link_to_remove "Remove This Photo"
+  / = f.link_to_add "Add a more image"
+  = f.label :image
+  = f.file_field :image
+
+  = f.label :price
+  = f.text_field :price
+
+  = f.label :description
+  = f.text_area :description
+
+  = f.submit "Create"

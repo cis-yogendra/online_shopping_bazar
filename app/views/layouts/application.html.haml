@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %title Onlinebazar
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body{style: "background: #EEEEEE;"}
+    %div{style: "float: right;margin-right: 23px;"}
+      - if user_signed_in?
+        = current_user.email
+        = link_to "Categories", categories_path, :class => 'btn btn-primary'
+        = link_to "Products", products_path, :class => 'btn btn-primary'
+        = link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-primary'
+      - else
+        = link_to "Sign up", new_user_registration_path, :class => "btn pull-right", "data-toggle" => "modal", :href => "#registration"
+        = link_to "Sign in", new_user_session_path, :class => "btn pull-right", "data-toggle" => "modal", :href => "#login"
+    = yield
