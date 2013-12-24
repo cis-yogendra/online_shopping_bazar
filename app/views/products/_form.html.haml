@@ -1,22 +1,30 @@
-= nested_form_for @product, :html => { :multipart => true } do |f| 
-  - @product.errors.full_messages.each do |error|
-    = error
-  = f.label :product_name
-  = f.text_field :product_name
+.product_list
+  %h1 Product
+  .main_form
+    = nested_form_for @product, :html => { :multipart => true } do |f| 
+      - @product.errors.full_messages.each do |error|
+        = error
+      .field
+        = f.label :category
+        = f.select :category_id, options_for_select(@categories.map{|i| [i.name, i.id]})
+      .field
+        = f.label :product_name
+        = f.text_field :product_name
 
-  / - f.fields_for :pictures do |photo|
-  /   %p
-  /     = f.label :image
-  /     = f.file_field :image
-  /     = photo.link_to_remove "Remove This Photo"
-  / = f.link_to_add "Add a more image"
-  = f.label :image
-  = f.file_field :image
-
-  = f.label :price
-  = f.text_field :price
-
-  = f.label :description
-  = f.text_area :description
-
-  = f.submit "Create"
+      / - f.fields_for :pictures do |photo|
+      /   %p
+      /     = f.label :image
+      /     = f.file_field :image
+      /     = photo.link_to_remove "Remove This Photo"
+      / = f.link_to_add "Add a more image"
+      .field
+        = f.label :image
+        = f.file_field :image
+      .field
+        = f.label :price
+        = f.text_field :price
+      .field
+        = f.label :description
+        = f.text_area :description, :cols => 50, :rows => 5
+      .field
+        = f.submit "Create", :class => "btn btn-primary"

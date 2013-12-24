@@ -12,3 +12,22 @@
  *= require_tree .
  *= require jquery.ui.all
  */
+
+/* Importing mixins */
+ @import "_mixins";
+
+ /* Importing base */
+ @import "_base";
+
+/* Importing Product Pgae */
+ @import "_products";
+
+/* Importing Category Pgae */
+ @import "_categories";
+
+/* Importing Home Pgae */
+ @import "_homes";
+
+/* Importing User Pgae */
+ @import "_categories";
+

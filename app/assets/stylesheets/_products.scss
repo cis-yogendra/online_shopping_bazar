@@ -1,0 +1,19 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.product_list {
+	border: 1px solid brown;
+	margin-top: 7%;
+	width: 50%;
+	margin-left: 250px;
+	margin-bottom: 10%;
+	> h1 {
+		background-color: #bf6e4e;
+		color: #ffffff;
+		margin: 0;
+		text-align: center;
+		/*@include filter-gradient(#f0b7a1, #bf6e4e, vertical);
+		@include background-image(linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%));*/
+	}
+	.main_form { padding-left: 200px; }
+}

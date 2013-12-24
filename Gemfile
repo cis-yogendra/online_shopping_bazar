@@ -23,6 +23,7 @@ group :assets do
   gem "less-rails"
   gem 'address_picker-rails'
   gem 'jquery-ui-themes'
+  gem 'compass-rails'
 end
 
 gem 'jquery-rails', '2.3.0'
