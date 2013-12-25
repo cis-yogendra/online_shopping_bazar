@@ -15,6 +15,7 @@
 //= require twitter/bootstrap
 //= require jquery.ui.all
 //= require address_picker-rails
+//= require jquery_nested_form
 //= require_tree .
 
 var picker = new AddressPickerRails.Picker({idPrefix:"user_address"});

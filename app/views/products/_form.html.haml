@@ -10,16 +10,13 @@
       .field
         = f.label :product_name
         = f.text_field :product_name
-
-      / - f.fields_for :pictures do |photo|
-      /   %p
-      /     = f.label :image
-      /     = f.file_field :image
-      /     = photo.link_to_remove "Remove This Photo"
-      / = f.link_to_add "Add a more image"
       .field
-        = f.label :image
-        = f.file_field :image
+        - f.fields_for :pictures do |photo|
+          %p
+            = photo.label :image
+            = photo.file_field :image
+            = photo.link_to_remove "Remove This Photo", :class => 'btn btn-danger'
+        = f.link_to_add "Add a image", :pictures, :class => 'btn btn-primary'
       .field
         = f.label :price
         = f.text_field :price

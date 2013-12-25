@@ -1,5 +1,6 @@
 = @product.product_name
-= image_tag @product.image(:thumb)
+- @product.pictures.each do |photo|
+  = image_tag photo.image(:thumb)
 = @product.price
 = @product.description
 = link_to "Index", products_path
