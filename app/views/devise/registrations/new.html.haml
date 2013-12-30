@@ -1,26 +1,28 @@
-#registration.modal.hide.fade
-  .modal-header
-    %a.btn.btn-success.pull-right{"data-dismiss" => "modal", href: "#"} ×
-    %h2 Sign up
-  .modal-body
+#registration
+  %h2 Sign up
+  .form-horizontal.sign_up_content{role: "form"}
     = form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
       = devise_error_messages!
-      %div
-        = f.label :email
-        %br/
-        = f.email_field :email, :autofocus => true
-      %div
-        = f.label :password
-        %br/
-        = f.password_field :password
-      %div
-        = f.label :password_confirmation
-        %br/
-        = f.password_field :password_confirmation
-      / %div
-      /   = f.label :image
-      /   %br/
-      /   = f.file_field :image
+      .form-group
+        = f.label :email, :class => "col-sm-2 control-label"
+        .col-sm-10
+          = f.email_field :email, :autofocus => true, :class => "form-control", :type => "email", :placeholder => "Email"
+      %br/
+      .form-group
+        = f.label :password, :class => "col-sm-2 control-label"
+        .col-sm-10
+          = f.password_field :password, :class => "form-control", :type => "password", :placeholder => "Password"
+      %br/
+      .form-group
+        = f.label :password_confirmation, :class => "col-sm-2 control-label"
+        .col-sm-10
+          = f.password_field :password_confirmation, :class => "form-control", :type => "password", :placeholder => "Confirm Password"
+      %br/
+      .form-group
+        = f.label :image, :class => "col-sm-2 control-label"
+        .col-sm-10
+          = f.file_field :image, :class => "form-control"
+      %br/
       / .field
       /   = f.label :address
       /   %br/
@@ -41,5 +43,7 @@
       /   = f.label :address_country
       /   %br/
       /   = f.text_field :address_country, :readonly => true, :class => 'address-picker-country'
-      %div= f.submit "Sign up"
-= render "devise/shared/links"
+      .form-group.reg_button
+        .col-sm-10
+          = f.submit "Registration", :class => "btn btn-default form-control", :type => "submit"
+    = render "devise/shared/links"

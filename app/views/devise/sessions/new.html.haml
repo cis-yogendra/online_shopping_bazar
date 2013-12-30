@@ -1,20 +1,22 @@
-#login.modal.hide.fade
-  .modal-header
-    %a.btn.btn-success.pull-right{"data-dismiss" => "modal", href: "#"} ×
-    %h2 Sign in
-  .modal-body
+#login
+  %h2 Sign in
+  .form-horizontal.sign_in_content{role: "form"}
     = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
-      %div
-        = f.label :email
-        %br/
-        = f.email_field :email, :autofocus => true
-      %div
-        = f.label :password
-        %br/
-        = f.password_field :password
+      .form-group
+        = f.label :email, :class => "col-sm-2 control-label"
+        .col-sm-10
+          = f.email_field :email, :autofocus => true, :class => "form-control", :type => "email", :placeholder => "Email"
+      %br/
+      .form-group
+        = f.label :password, :class => "col-sm-2 control-label"
+        .col-sm-10
+          = f.password_field :password, :class => "form-control", :type => "password", :placeholder => "Password"
       - if devise_mapping.rememberable?
-        %div
-          = f.check_box :remember_me
-          = f.label :remember_me
-      %div= f.submit "Sign in"
-= render "devise/shared/links"
+        .form-group
+          = f.label :remember_me, :class => "col-sm-2 control-label"
+          .col-sm-10
+            = f.check_box :remember_me, :class => "checkbox"
+      .form-group.reg_button
+        .col-sm-10
+          = f.submit "Login", :class => "btn btn-default form-control login_button", :type => "submit"
+    = render "devise/shared/links"
