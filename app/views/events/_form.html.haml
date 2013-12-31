@@ -1,0 +1,91 @@
+%form#components.form-horizontal
+  = form_for @event do |f|
+    %fieldset
+      .tab-content
+        //Tabs of snippets go here
+	      #input.tab-pane.active
+	        .component
+            / Text input
+            .control-group
+              %label.control-label
+                = f.label :name, :for => "textinput"
+              .controls
+                %input#textinput.input-xlarge
+                  = f.text_field :name, :placeholder => "insert event name", :name => "textinput", :type => "text"
+                %p.help-block help
+          .component
+            / Button Drop Down
+            .control-group
+              %label.control-label
+                = f.label :event_type, :for => "buttondropdown"
+              .controls
+                .input-append
+                  %input#buttondropdown.input-xlarge
+                    = f.select :event_type, :name => "buttondropdown", :placeholder => "please select any event type", :type => "text"
+                  .btn-group
+                    %button.btn.dropdown-toggle{"data-toggle" => "dropdown"}
+                      Event Type
+                      %span.caret
+                    %ul.dropdown-menu
+                      %li
+                        %a{href: "#"} Business
+                      %li
+                        %a{href: "#"} Technology
+                      %li
+                        %a{href: "#"} Social Networking
+          .component
+            / Search input
+            .control-group
+              %label.control-label{for: "searchinput"} Search Input
+                = f.label :date, :for => "date_select"
+              .controls
+                %input#searchinput.input-xlarge.search-query
+                  = f.datepicker :date, :name => "date_select", :type => "text"
+                %p.help-block help
+	        .component
+	          / Prepended text
+	          .control-group
+	            %label.control-label{for: "prependedtext"} Prepended Text
+	            .controls
+	              .input-prepend
+	                %span.add-on prepend
+	                %input#prependedtext.input-xlarge{name: "prependedtext", placeholder: "placeholder", type: "text"}/
+	              %p.help-block help
+	        .component
+	          / Appended Input
+	          .control-group
+	            %label.control-label{for: "appendedtext"} Appended Text
+	            .controls
+	              .input-append
+	                %input#appendedtext.input-xlarge{name: "appendedtext", placeholder: "placeholder", type: "text"}/
+	                %span.add-on append
+	              %p.help-block help
+	        .component
+	          / Prepended checkbox
+	          .control-group
+	            %label.control-label{for: "prependedcheckbox"} Prepended Checkbox
+	            .controls
+	              .input-prepend
+	                %span.add-on
+	                  %label.checkbox
+	                    %input{type: "checkbox"}/
+	                %input#prependedcheckbox.input-xlarge{name: "prependedcheckbox", placeholder: "placeholder", type: "text"}/
+	              %p.help-block help
+	        .component
+	          / Appended checkbox
+	          .control-group
+	            %label.control-label{for: "appendedcheckbox"} Appended Checkbox
+	            .controls
+	              .input-append
+	                %input#appendedcheckbox.span2{name: "appendedcheckbox", placeholder: "placeholder", type: "text"}/
+	                %span.add-on
+	                  %input{type: "checkbox"}/
+	              %p.help-block help
+	        .component
+	          / Textarea
+	          .control-group
+	            %label.control-label{for: "textarea"} Text Area
+	            .controls
+	              %textarea#textarea{name: "textarea"} default text
+	      
+      

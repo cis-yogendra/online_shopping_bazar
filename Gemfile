@@ -24,6 +24,7 @@ group :assets do
   gem 'address_picker-rails'
   gem 'jquery-ui-themes'
   gem 'compass-rails'
+  gem 'jquery_datepicker'
 end
 
 gem 'jquery-rails', '2.3.0'

@@ -8,6 +8,7 @@ Onlinebazar::Application.routes.draw do
   resources :products
   resources :categories
   resources :homes, :only => [:index]
+  resources :events
   # root :to => 'products#index'
 
   # The priority is based upon order of creation:
