@@ -9,25 +9,36 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
  *= require jquery.ui.all
  */
 
-/* Importing mixins */
- @import "_mixins";
+// Site wide variables
+// Configure your styleguide here.
+@import "globals/variables.css.scss";
+
+@import "globals/mixins.css.scss";
 
  /* Importing base */
- @import "_base";
+ @import "globals/base.css.scss";
 
 /* Importing Product Pgae */
- @import "_products";
+ @import "products.css.scss";
 
 /* Importing Category Pgae */
- @import "_categories";
+ @import "categories.css.scss";
 
 /* Importing Home Pgae */
- @import "_homes";
+ @import "homes.css.scss";
 
 /* Importing User Pgae */
- @import "_categories";
+ @import "user.css.scss";
+
+ @import "layouts.css.scss";
+
+ /*Importing bootstrap files*/
+ @import "bootstrap-responsive.css.scss";
+ @import "bootstrap.css.scss";
+ @import "bootstrap_overwrites.css.scss";
+ @import "bootstrap.min.css.scss";
+ @import "bootstrap-responsive.min.css.scss";
 

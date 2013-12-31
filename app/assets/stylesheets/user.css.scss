@@ -6,6 +6,6 @@
   margin-left: 370px;
   > h2 { text-align: center;}
   width: 50%;
-  .sign_up_content, .sign_in_content { padding: 10px 0 10px 80px; }
+  .sign_up_content, .sign_in_content { padding: $padding 0 $padding 80px; }
   .reg_button, .login_button { text-align: center; }
 }
