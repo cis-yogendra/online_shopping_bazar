@@ -1,3 +1,13 @@
 // Place all the styles related to the categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.category_form, .category_show {
+	margin-top: 10%;
+	box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  margin-left: 370px;
+  > h2 { text-align: center;}
+  width: 50%;
+  .category_page { padding: $padding 0 $padding 80px; }
+}
