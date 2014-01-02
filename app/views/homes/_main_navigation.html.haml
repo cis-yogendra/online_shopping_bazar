@@ -1,12 +1,13 @@
-%table.table.table-striped
-  %thead
-    %tr
-      %th Name
-  %tbody
-    - @categories.each do |category|
-      %tr
-        %td 
-          = category.name
-          - category.sub_categories.each do |subcategory|
-            %td 
-              = subcategory.name
+%nav.navbar.navbar-default{role: "navigation"}
+  .navbar-header
+    %ul.nav.navbar-nav
+      - @categories.each do |category|
+        %li.dropdown
+          %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
+            = category.name
+          %ul.dropdown-menu
+            - category.sub_categories.each do |subcategory|
+              %li
+                %a
+                  = subcategory.name
+  / /.navbar-collapse
