@@ -48,4 +48,4 @@ gem 'bcrypt-ruby', '3.1.1.rc1', :require => 'bcrypt'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
