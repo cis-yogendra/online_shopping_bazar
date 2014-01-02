@@ -1,9 +1,9 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.product_list, .product_show {
+.product_form, .product_show {
 	border: $border-brown;
-	margin-top: 7%;
+	margin-top: 22%;
 	width: 50%;
 	margin-left: 250px;
 	margin-bottom: 10%;
@@ -12,8 +12,22 @@
 		color: #ffffff;
 		margin: 0;
 		text-align: center;
-		/*@include filter-gradient(#f0b7a1, #bf6e4e, vertical);
-		@include background-image(linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%));*/
 	}
 	.main_form { padding-left: 200px; }
+}
+.products_page {
+	margin-top: 15%;
+	margin-bottom: 10%;
+	background-color: #FFFFFF;
+	border: 1px solid #DDDDDD;
+	border-radius: 4px 4px 0 0;
+	box-shadow: none;
+	margin-right: 0;
+  // -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  // -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+  margin-left: 370px;
+  > h2 { text-align: center;}
+  width: 50%;
+  .product_lists { padding: $padding 0 $padding 80px; }
+  .add_product { margin: $margin; }
 }

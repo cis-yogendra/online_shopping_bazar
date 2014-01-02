@@ -1,27 +1,26 @@
-.product_list
+.product_form
   %h1 Product
-  .main_form
-    = nested_form_for @product, :html => { :multipart => true } do |f| 
-      - @product.errors.full_messages.each do |error|
-        = error
-      .field
-        = f.label :category
-        = f.select :category_id, options_for_select(@categories.map{|i| [i.name, i.id]})
-      .field
-        = f.label :product_name
-        = f.text_field :product_name
-      .field
-        - f.fields_for :pictures do |photo|
-          %p
-            = photo.label :image
-            = photo.file_field :image
-            = photo.link_to_remove "Remove This Photo", :class => 'btn btn-danger'
-        = f.link_to_add "Add a image", :pictures, :class => 'btn btn-primary'
-      .field
-        = f.label :price
-        = f.text_field :price
-      .field
-        = f.label :description
-        = f.text_area :description, :cols => 50, :rows => 5
-      .field
-        = f.submit "Create", :class => "btn btn-primary"
+  = nested_form_for @product, :html => { :multipart => true } do |f| 
+    - @product.errors.full_messages.each do |error|
+      = error
+    .field
+      = f.label :category
+      = f.select :category_id, options_for_select(@categories.map{|i| [i.name, i.id]})
+    .field
+      = f.label :product_name
+      = f.text_field :product_name
+    .field
+      - f.fields_for :pictures do |photo|
+        %p
+          = photo.label :image
+          = photo.file_field :image
+          = photo.link_to_remove "Remove This Photo", :class => 'btn btn-danger'
+      = f.link_to_add "Add a image", :pictures, :class => 'btn btn-primary'
+    .field
+      = f.label :price
+      = f.text_field :price
+    .field
+      = f.label :description
+      = f.text_area :description, :cols => 50, :rows => 5
+    .field
+      = f.submit "Create", :class => "btn btn-primary"

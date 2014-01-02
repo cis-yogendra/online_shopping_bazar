@@ -1,8 +1,8 @@
-%nav.navbar.navbar-default{role: "navigation"}
+%nav.navbar.navbar-inverse{role: "navigation"}
   .navbar-header
     %ul.nav.navbar-nav
       - @categories.each do |category|
-        %li.dropdown
+        %li.dropdown.active
           %a.dropdown-toggle{"data-toggle" => "dropdown", href: "#"}
             = category.name
           %ul.dropdown-menu
