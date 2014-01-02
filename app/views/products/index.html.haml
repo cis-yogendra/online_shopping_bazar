@@ -4,10 +4,11 @@
       .form-group
         .col-sm-10
           = product.product_name
-      - product.pictures.each do |photo|
-        .form-group
-          .col-sm-10
-            = image_tag photo.image(:thumb)
+      .row
+        - product.pictures.each do |photo|
+          .col-xs-6.col-md-3
+            %a.thumbnail
+              = image_tag photo.image(:thumb)
       .form-group
         .col-sm-10
           = product.price
