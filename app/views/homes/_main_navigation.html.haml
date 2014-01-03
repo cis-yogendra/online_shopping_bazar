@@ -9,5 +9,5 @@
             - category.sub_categories.each do |subcategory|
               %li
                 %a
-                  = link_to "#{subcategory.name}", products_path
+                  = link_to "#{subcategory.name}", category_products_path(@category)
   / /.navbar-collapse

@@ -6,7 +6,9 @@ Onlinebazar::Application.routes.draw do
   devise_for :users
   ActiveAdmin.routes(self)
   resources :products
-  resources :categories
+  resources :categories do
+    resources :products
+  end
   resources :homes, :only => [:index]
   resources :events
   # root :to => 'products#index'
