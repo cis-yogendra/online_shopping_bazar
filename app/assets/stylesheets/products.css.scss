@@ -15,19 +15,31 @@
 	}
 	.main_form { padding-left: 200px; }
 }
+// .products_page {
+// 	margin-top: 15%;
+// 	margin-bottom: 10%;
+// 	// background-color: #FFFFFF;
+// 	// border: 1px solid #DDDDDD;
+// 	// border-radius: 4px 4px 0 0;
+// 	// box-shadow: none;
+// 	// margin-right: 0;
+//   // -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+//   // -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
+//   margin-left: 370px;
+//   > h2 { text-align: center;}
+//   // width: 50%;
+  
+// }
 .products_page {
 	margin-top: 15%;
-	margin-bottom: 10%;
-	background-color: #FFFFFF;
-	border: 1px solid #DDDDDD;
+  margin-bottom: 10%;
+	padding: $padding 0 $padding 80px;
+	margin-left: 0;
+	margin-right: 0;
+	background-color: white;
+	border-width: 1px;
+	border-color: #DDD;
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
-	margin-right: 0;
-  // -moz-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
-  // -webkit-box-shadow: 0 1px 10px rgba(0,0,0,0.5);
-  margin-left: 370px;
-  > h2 { text-align: center;}
-  width: 50%;
-  .product_lists { padding: $padding 0 $padding 80px; }
-  .add_product { margin: $margin; }
 }
+.add_product { margin: $margin; }

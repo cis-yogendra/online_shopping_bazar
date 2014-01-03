@@ -25,6 +25,7 @@ group :assets do
   gem 'jquery-ui-themes'
   gem 'compass-rails'
   gem 'jquery_datepicker'
+  gem 'bootstrap-sass', '~> 3.0.3.0'
 end
 
 gem 'jquery-rails', '2.3.0'
