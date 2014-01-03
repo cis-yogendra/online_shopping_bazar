@@ -1,6 +1,6 @@
 .product_form
   %h1 Product
-  = nested_form_for([@category,@product], :url => products_url, :html => {:multiple => true}) do |f|
+  = nested_form_for([@category,@product], :url => category_products_url, :html => {:multiple => true}) do |f|
     - @product.errors.full_messages.each do |error|
       = error
     .field

@@ -12,6 +12,10 @@
               = product.price
             %p
               = product.description
-          = link_to "Destroy", category_product, :method => :delete, :confirm => "Are you sure", :class => "btn btn-min btn-danger"
-          = link_to "Edit", edit_category_product(@category,product), :class => 'btn btn-mini',:remote => true
-  = link_to "Add Product", new_category_product_path(@category), :class => "btn btn-default add_product"
+            %p
+              =# @categories.name
+          = #link_to "Destroy", [@category, product], :method => :delete, :confirm => "Are you sure", :class => "btn btn-min btn-danger"
+          = #link_to "Edit", edit_category_product(@category,product), :class => 'btn btn-mini',:remote => true
+  = form_tag category_products_path, :method => 'get' do
+    = text_field_tag :search, params[:search], :placeholder => "search products"
+  = link_to "Add Product", new_category_product_path(@categories), :class => "btn btn-default add_product"

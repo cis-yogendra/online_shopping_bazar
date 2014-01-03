@@ -3,6 +3,8 @@ class ProductsController < ApplicationController
 		@products = Product.search(params[:search])
 	end
 	def show
+		# debugger
+		# @categories = Category.where(parent_id:nil)
 		@product = Product.find(params[:id])
 	end
 	def new
@@ -15,8 +17,9 @@ class ProductsController < ApplicationController
 	def create
 		@categories = Category.where(parent_id:nil)
 		@product = Product.new(params[:product])
+		# debugger
 		if @product.save
-			redirect_to product_path(@product)
+			redirect_to category_products_path(@categories)
 		else
 			render 'new'
 		end

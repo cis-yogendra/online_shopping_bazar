@@ -1,0 +1,37 @@
+I, [2014-01-04T03:18:31.862634 #8950]  INFO -- : Refreshing Gem list
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-04T03:18:41.914538 #8950]  INFO -- : listening on addr=/home/yogi/Desktop/Rails/3Jan/online_shopping_bazar/.unicorn.sock fd=10
+E, [2014-01-04T03:18:41.915020 #8950] ERROR -- : adding listener failed addr=0.0.0.0:8080 (in use)
+E, [2014-01-04T03:18:41.915084 #8950] ERROR -- : retrying in 0.5 seconds (4 tries left)
+E, [2014-01-04T03:18:42.415644 #8950] ERROR -- : adding listener failed addr=0.0.0.0:8080 (in use)
+E, [2014-01-04T03:18:42.415819 #8950] ERROR -- : retrying in 0.5 seconds (3 tries left)
+E, [2014-01-04T03:18:42.916370 #8950] ERROR -- : adding listener failed addr=0.0.0.0:8080 (in use)
+E, [2014-01-04T03:18:42.916518 #8950] ERROR -- : retrying in 0.5 seconds (2 tries left)
+E, [2014-01-04T03:18:43.417101 #8950] ERROR -- : adding listener failed addr=0.0.0.0:8080 (in use)
+E, [2014-01-04T03:18:43.417279 #8950] ERROR -- : retrying in 0.5 seconds (1 tries left)
+E, [2014-01-04T03:18:43.917896 #8950] ERROR -- : adding listener failed addr=0.0.0.0:8080 (in use)
+E, [2014-01-04T03:18:43.918073 #8950] ERROR -- : retrying in 0.5 seconds (0 tries left)
+E, [2014-01-04T03:18:44.418557 #8950] ERROR -- : adding listener failed addr=0.0.0.0:8080 (in use)
+/home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/socket_helper.rb:185:in `bind': Address already in use - bind(2) (Errno::EADDRINUSE)
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/socket_helper.rb:185:in `new_tcp_server'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/socket_helper.rb:165:in `bind_listen'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/http_server.rb:255:in `listen'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/http_server.rb:801:in `block in bind_new_listeners!'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/http_server.rb:801:in `each'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/http_server.rb:801:in `bind_new_listeners!'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/lib/unicorn/http_server.rb:146:in `start'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/gems/unicorn-4.7.0/bin/unicorn_rails:209:in `<top (required)>'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/bin/unicorn_rails:19:in `load'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/bin/unicorn_rails:19:in `<main>'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/bin/ruby_noexec_wrapper:14:in `eval'
+	from /home/yogi/.rvm/gems/ruby-1.9.3-p286/bin/ruby_noexec_wrapper:14:in `<main>'
+I, [2014-01-04T03:19:32.364801 #8967]  INFO -- : Refreshing Gem list
+[deprecated] I18n.enforce_available_locales will default to true in the future. If you really want to skip validation of your locale you can set I18n.enforce_available_locales = false to avoid this message.
+I, [2014-01-04T03:19:41.761790 #8967]  INFO -- : unlinking existing socket=/home/yogi/Desktop/Rails/3Jan/online_shopping_bazar/.unicorn.sock
+I, [2014-01-04T03:19:41.762033 #8967]  INFO -- : listening on addr=/home/yogi/Desktop/Rails/3Jan/online_shopping_bazar/.unicorn.sock fd=10
+I, [2014-01-04T03:19:41.762485 #8967]  INFO -- : listening on addr=0.0.0.0:8088 fd=11
+I, [2014-01-04T03:19:41.784352 #8967]  INFO -- : master process ready
+I, [2014-01-04T03:19:41.794249 #8973]  INFO -- : worker=0 ready
+I, [2014-01-04T03:19:41.794575 #8976]  INFO -- : worker=1 ready
+I, [2014-01-04T03:19:41.805500 #8979]  INFO -- : worker=2 ready
+I, [2014-01-04T03:19:41.806385 #8982]  INFO -- : worker=3 ready

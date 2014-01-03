@@ -2,7 +2,7 @@
   - if user_signed_in?
     = current_user.email
     = link_to "Categories", categories_path, :class => 'btn btn-primary'
-    = link_to "Products", products_path, :class => 'btn btn-primary'
+    = link_to "Products", category_products_path(@categories), :class => 'btn btn-primary'
     = link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-primary'
   - else
     = link_to "Sign up", new_user_registration_path, :class => "btn pull-right"
